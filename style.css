@@ -9,7 +9,7 @@
   --silver:     #b8c4d4;
   --navy:       #1a2a4a;
   --dark:       #080e1c;
-  --darker:     #050a14;
+  --darker:     #0d1830;
   --card-bg:    rgba(200,169,110,0.04);
   --card-border:rgba(200,169,110,0.18);
   --grid-color: rgba(200,169,110,0.04);
@@ -20,13 +20,13 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--darker);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden;min-height:100vh;cursor:none;}
+body{background:var(--darker);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;font-size: 20px;overflow-x:hidden;min-height:100vh;cursor:none;}
 ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-track{background:var(--darker);}::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--silver));border-radius:2px;}
 .cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 12px rgba(200,169,110,0.8);}
 .cursor-trail{position:fixed;width:26px;height:26px;border:1px solid rgba(200,169,110,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease;}
 a,button{cursor:none;}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);background-size:52px 52px;z-index:0;pointer-events:none;}
-.bg-glow{position:fixed;top:-15%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(ellipse,rgba(26,42,74,0.65) 0%,rgba(200,169,110,0.06) 45%,transparent 70%);pointer-events:none;z-index:0;animation:bgPulse 10s ease-in-out infinite;}
+.bg-glow{position:fixed;top:-15%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(ellipse,rgba(26,42,74,0.65) 0%,rgba(200,169,110,0.15) 45%,transparent 70%);pointer-events:none;z-index:0;animation:bgPulse 10s ease-in-out infinite;}
 @keyframes bgPulse{0%,100%{opacity:1;transform:translateX(-50%) scale(1);}50%{opacity:.7;transform:translateX(-50%) scale(1.08);}}
 #bg-canvas{position:fixed;inset:0;pointer-events:none;z-index:0;}
 #confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:999;display:none;}
@@ -101,7 +101,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .hero-logo-wrap{margin-bottom:20px;animation:fadeDown 1s .1s ease both;}
 .hero-logo-img{width:clamp(100px,18vw,160px);height:clamp(100px,18vw,160px);object-fit:contain;filter:drop-shadow(0 0 30px rgba(200,169,110,.4));animation:logoFloat 4s ease-in-out infinite;}
 @keyframes logoFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-.hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(3.5rem,13vw,8.5rem);letter-spacing:10px;line-height:1;background:linear-gradient(135deg,#fff 0%,var(--gold-light) 35%,var(--gold) 65%,var(--silver) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(200,169,110,.4));animation:fadeDown 1s .2s ease both;margin-bottom:12px;}
+.hero-title{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(3.5rem,13vw,10rem);letter-spacing:10px;line-height:1;background:linear-gradient(135deg,#fff 0%,var(--gold-light) 35%,var(--gold) 65%,var(--silver) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(200,169,110,.4));animation:fadeDown 1s .2s ease both;margin-bottom:12px;}
 .hero-tagline{font-family:'Share Tech Mono',monospace;font-size:clamp(.62rem,2vw,.82rem);letter-spacing:7px;color:rgba(184,196,212,.6);margin-bottom:44px;animation:fadeDown 1s .35s ease both;}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s .5s ease both;}
 .scroll-hint{position:absolute;bottom:28px;font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:3px;color:rgba(200,169,110,.3);animation:fadeIn 2s 1.5s ease both,scrollBounce 2.5s 2s ease-in-out infinite;}
