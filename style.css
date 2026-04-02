@@ -159,7 +159,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 @media(max-width:900px){.leads-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:480px){.leads-grid{grid-template-columns:1fr;}}
 @media (max-width: 768px) {.team-row {gap: 20px;}.lead-card {width: 180px;padding: 18px;}.lead-img {width: 65px;height: 65px;}}
-.lead-card{background:rgba(255,255,255,0.02);width: 220px;border:1px solid var(--card-border);padding:24px;text-align:center;position:relative;overflow:hidden;transition:all 0.4s ease;opacity: 0;transform: translateY(40px);animation: fadeUp 0.6s ease forwards;backdrop-filter: blur(10px);}
+.lead-card{background:rgba(255,255,255,0.02);width: 220px;border:1px solid var(--card-border);padding:24px;text-align:center;position:relative;overflow:hidden;transition:transform 0.2s ease;opacity: 0;transform: translateY(40px);animation: fadeUp 0.6s ease forwards;backdrop-filter: blur(10px);}
 /* ROW 1 (2 cards) */
 .team-row:nth-child(1) .lead-card:nth-child(1) { animation-delay: 0.1s; }
 .team-row:nth-child(1) .lead-card:nth-child(2) { animation-delay: 0.2s; }
