@@ -31,43 +31,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 #bg-canvas{position:fixed;inset:0;pointer-events:none;z-index:0;}
 #confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:999;display:none;}
 
-/* ══ SPLASH ══ */
-#splash{position:fixed;inset:0;z-index:10000;background:var(--darker);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .9s ease,transform .9s ease;}
-#splash.hide{opacity:0;transform:scale(1.05);pointer-events:none;}
-.splash-bg-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(26,42,74,0.8) 0%,rgba(200,169,110,0.08) 50%,transparent 70%);animation:bgPulse 4s ease-in-out infinite;}
-#splash-canvas{position:absolute;inset:0;pointer-events:none;}
-.splash-content{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-#splash-countdown-phase{display:flex;flex-direction:column;align-items:center;animation:fadeIn .6s ease both;}
-.splash-top-label{font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:6px;color:rgba(200,169,110,.5);margin-bottom:36px;}
-
-/* Ring — fixed centering */
-.splash-ring-wrap{position:relative;width:clamp(180px,32vw,240px);height:clamp(180px,32vw,240px);margin-bottom:28px;display:flex;align-items:center;justify-content:center;}
-.splash-ring-svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);}
-.splash-ring-deco{fill:none;stroke:rgba(200,169,110,.07);stroke-width:2;}
-.splash-ring-bg{fill:none;stroke:rgba(200,169,110,.13);stroke-width:5;}
-.splash-ring-fg{fill:none;stroke:url(#ringGrad);stroke-width:5;stroke-linecap:round;transition:stroke-dashoffset .95s linear;filter:drop-shadow(0 0 8px rgba(200,169,110,.7));}
-.splash-ring-inner{fill:rgba(200,169,110,.03);stroke:rgba(200,169,110,.05);stroke-width:1;}
-/* number centered via flex, NOT absolute */
-.splash-num-wrap{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;}
-.splash-num{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(4rem,13vw,7rem);background:linear-gradient(135deg,#fff 0%,var(--gold-light) 40%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(200,169,110,.8));line-height:1;display:block;animation:numPop .4s cubic-bezier(.34,1.56,.64,1) both;}
-@keyframes numPop{from{transform:scale(.3);opacity:0;}to{transform:scale(1);opacity:1;}}
-.splash-sub{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:5px;color:rgba(184,196,212,.4);}
-
-#splash-inaugurate-phase{display:none;flex-direction:column;align-items:center;animation:fadeUp .8s cubic-bezier(.34,1.1,.64,1) both;}
-.splash-mystery-mark{font-size:3rem;color:var(--gold);filter:drop-shadow(0 0 20px rgba(200,169,110,.8));margin-bottom:20px;animation:rotateSlow 6s linear infinite;}
-@keyframes rotateSlow{to{transform:rotate(360deg);}}
-.splash-reveal-hint{font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:6px;color:rgba(200,169,110,.55);margin-bottom:44px;}
-.splash-inaugurate-btn{position:relative;background:none;border:none;padding:0;cursor:none;margin-bottom:20px;}
-.splash-btn-inner{display:flex;align-items:center;gap:14px;font-family:'Cinzel',serif;font-weight:700;font-size:clamp(.85rem,2.5vw,1.05rem);letter-spacing:6px;color:var(--dark);background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--silver));padding:22px 68px;position:relative;z-index:1;clip-path:polygon(16px 0%,100% 0%,calc(100% - 16px) 100%,0% 100%);transition:transform .3s ease,filter .3s ease;}
-.splash-btn-star{font-size:1.2rem;animation:iconSpin 4s linear infinite;}
-@keyframes iconSpin{to{transform:rotate(360deg);}}
-.splash-btn-glow{position:absolute;inset:-6px;background:linear-gradient(135deg,var(--gold-light),var(--gold));clip-path:polygon(16px 0%,100% 0%,calc(100% - 16px) 100%,0% 100%);filter:blur(18px);opacity:.5;z-index:0;animation:glowPulse 2.5s ease-in-out infinite;}
-@keyframes glowPulse{0%,100%{opacity:.4;}50%{opacity:.9;}}
-.splash-inaugurate-btn:hover .splash-btn-inner{transform:translateY(-4px);filter:brightness(1.1);}
-.splash-inaugurate-btn:hover .splash-btn-glow{filter:blur(28px);opacity:.9;}
-.splash-hint{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:3px;color:rgba(200,169,110,.3);animation:pulse 2.5s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
-
+.inaug-text {font-size: 1.2rem;color: var(--gold-light);text-align: center;margin-top: 10px;letter-spacing: 2px;}
 /* ══ NAVBAR ══ */
 #navbar{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;background:rgba(5,10,20,.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,169,110,.12);transition:var(--tr);}
 #navbar.scrolled{background:rgba(5,10,20,.95);border-bottom-color:rgba(200,169,110,.28);}
